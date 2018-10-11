@@ -1,0 +1,12 @@
+{
+  "name": "csh",
+  "version": "1.0.0",
+  "description": "Define shorthand for your frequently used and tediously long commands",
+  "main": "command.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "command.js",
+  "author": "AdityaHirapara",
+  "license": "UNLICENSED"
+}
