@@ -51,6 +51,10 @@ cmsh d watch "echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches &&
 cmsh r watch
 ```
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/AdityaHirapara/cmd-shortener/master/assets/Screenshot_cmsh.png">
+</p>
+
 ### Development
 
 Before starting, install these dependencies if you don't have them:
