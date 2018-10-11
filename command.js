@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
 const { prompt } = require('inquirer');
-const { jsonToMap, mapToJson } = require('./utils');
+const { jsonToMap, mapToJson, display } = require('./utils');
 
 if (process.env.HOME || process.env.HOMEPATH) {
   var HOME = path.resolve(process.env.HOME || process.env.HOMEPATH, '.csh');
@@ -105,6 +105,24 @@ program
       } else {
         console.log(chalk`{bgYellow WARN} shorthand:${shorthand} is not defined!\n You can define it by hitting {bold csh d ${shorthand} <command>}.`)
       }
+    });
+  });
+
+program
+  .command('list')
+  .alias('l')
+  .description('List all defined shorthands')
+  .action(() => {
+    fs.readFile(STORE_PATH, 'utf8', function (err, content) {
+      if (err) {
+        if (err.code === 'ENOENT') {
+          content = "{}";
+        } else {
+          return console.log(chalk`{bgRed ERR} Something went wrong while getting your shorthands!`);
+        }
+      }
+
+      display(content);
     });
   });
 

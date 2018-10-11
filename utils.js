@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 
 function mapToJson(strMap) {
   return JSON.stringify(strMapToObj(strMap));
@@ -23,7 +24,15 @@ function objToStrMap(obj) {
   return strMap;
 }
 
+function display(obj) {
+  obj = JSON.parse(obj);
+  for (let k of Object.keys(obj)) {
+    console.log(chalk`{bold ${k}}    ${obj[k]}`);
+  }
+}
+
 module.exports = {
   mapToJson,
-  jsonToMap
+  jsonToMap,
+  display
 };
