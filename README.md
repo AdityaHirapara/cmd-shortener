@@ -11,39 +11,39 @@ Tool to define shorthand for your frequently used and tediously long commands.
 ### Usage
 Define shorthand :
 ```
-csh d <shorthand> "<command>"
+cmsh d <shorthand> "<command>"
 ```
 or
 ```
-csh define <shorthand> "<command>"
+cmsh define <shorthand> "<command>"
 ```
 
 Run command using shorthand :
 ```
-csh r <shorthand>
+cmsh r <shorthand>
 ```
 or
 ```
-csh run <shorthand>
+cmsh run <shorthand>
 ```
 
 List all defined shorthands :
 ```
-csh l
+cmsh l
 ```
 or
 ```
-csh list
+cmsh list
 ```
 
 ### Example
 
 ```
-csh d watch "echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances"
+cmsh d watch "echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances"
 ```
 
 ```
-csh r watch
+cmsh r watch
 ```
 
 ### Development

@@ -9,17 +9,17 @@ const { prompt } = require('inquirer');
 const { jsonToMap, mapToJson, display } = require('./utils');
 
 if (process.env.HOME || process.env.HOMEPATH) {
-  var HOME = path.resolve(process.env.HOME || process.env.HOMEPATH, '.csh');
+  var HOME = path.resolve(process.env.HOME || process.env.HOMEPATH, '.cmsh');
   var STORE_PATH = path.resolve(HOME, 'store.json');
 } else {
   console.error(chalk`{bgRed ERR} {bgYellow Initialization} Environment variable HOME (Linux) or HOMEPATH (Windows) are not set!`);
   console.error(chalk`{bgRed ERR} {bgYellow Initialization} Trying to use Environment variable USER (Linux) or USERPROFILE (Windows)`);
 
   if(process.env.USER) {
-    var HOME = path.resolve('/home', process.env.USER, '.csh');
+    var HOME = path.resolve('/home', process.env.USER, '.cmsh');
     var STORE_PATH = path.resolve(HOME, 'store.json');
   } else if (process.env.USERPROFILE) {
-    var HOME = path.resolve(process.env.USERPROFILE, '.csh');
+    var HOME = path.resolve(process.env.USERPROFILE, '.cmsh');
     var STORE_PATH = path.resolve(HOME, 'store.json');
   } else {
     console.error(chalk`{bgRed ERR} {bgYellow Initialization} Please set environment variable HOME (Linux) or HOMEPATH (Windows).`);
@@ -103,7 +103,7 @@ program
       if (commands.has(shorthand)) {
         execSh(commands.get(shorthand));
       } else {
-        console.log(chalk`{bgYellow WARN} shorthand:${shorthand} is not defined!\n You can define it by hitting {bold csh d ${shorthand} <command>}.`)
+        console.log(chalk`{bgYellow WARN} shorthand:${shorthand} is not defined!\n You can define it by hitting {bold cmsh d ${shorthand} <command>}.`)
       }
     });
   });
