@@ -2,11 +2,16 @@
 CMD-Shortener
 </h1> 
 <p align='center'>
-<img src='./assets/logo.svg' >
+<img height="120px" src='https://raw.githubusercontent.com/AdityaHirapara/cmd-shortener/master/assets/logo.png' >
 </p>
 <h4 align='center'>
 Tool to define shorthand for your frequently used and tediously long commands.
 </h4>
+
+### Installation
+```
+npm install -g cmsh
+```
 
 ### Usage
 Define shorthand :
@@ -66,4 +71,5 @@ To run:
 sudo npm link
 ```
 
-##### Open issues and PRs, feel free to contribute.<br>Also if you liked it, then do star the repo and share with your friends!
+<br>
+Open issues and PRs, feel free to contribute.<br>Also if you liked it, then do star the repo and share with your friends!
