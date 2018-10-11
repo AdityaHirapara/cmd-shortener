@@ -1,19 +1,29 @@
 {
   "name": "cmsh",
-  "version": "1.0.0",
-  "description": "Define shorthand for your frequently used and tediously long commands",
+  "version": "1.0.3",
+  "description": "Tool to define shorthand for your frequently used and tediously long commands",
   "main": "command.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": "command.js",
   "author": "AdityaHirapara",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "exec-sh": "^0.3.1",
     "inquirer": "^6.2.0",
     "mkdirp": "^0.5.1"
-  }
+  },
+  "keywords": [
+    "command",
+    "command-shortener",
+    "shortener",
+    "terminal",
+    "shell",
+    "cli",
+    "command-line",
+    "utility"
+  ]
 }
