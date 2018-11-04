@@ -7,6 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": "command.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdityaHirapara/cmd-shortener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdityaHirapara/cmd-shortener/issues"
+  },
+  "homepage": "https://github.com/AdityaHirapara/cmd-shortener#readme",
   "author": "AdityaHirapara",
   "license": "MIT",
   "dependencies": {
